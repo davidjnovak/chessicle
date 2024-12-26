@@ -116,15 +116,21 @@ const ChessGame = () => {
           Black Score: {score.black}
         </Text>
       </HStack>
-      
-      <Box w="600px" h="600px">
-        <Chessboard
-          position={game.fen()}
-          onPieceDrop={onDrop}
-          boardOrientation={playerColor}
+  
+      <Box 
+        w={{ base: '300px', md: '600px' }} 
+        h={{ base: '300px', md: '600px' }} 
+        maxW="full" 
+        maxH="full" 
+      >
+        <Chessboard 
+          position={game.fen()} 
+          onPieceDrop={onDrop} 
+          boardOrientation={playerColor} 
+          style={{ touchAction: 'manipulation' }} 
         />
       </Box>
-      
+  
       <Text fontSize="lg" fontWeight="bold">
         {game.turn() === 'w' ? "White" : "Black"}'s turn
       </Text>
