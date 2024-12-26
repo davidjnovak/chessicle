@@ -47,7 +47,7 @@ const Home = () => {
   return (
     <VStack spacing={8} align="center" justify="center" h="100vh">
       <Text fontSize="4xl" fontWeight="bold">
-        Welcome to Chess Game
+        Welcome to Chessicle
       </Text>
       <Button
         colorScheme="blue"
